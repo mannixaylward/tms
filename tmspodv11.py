@@ -18,7 +18,7 @@
 ##		Change	Introduce thresholds for negative alarms
 ##	Version 11
 ##		Date	07/06/2016
-##		Add sound to pin 12
+##		Add sound connect piezio to pin 12
 
 
 import _mysql
