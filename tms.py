@@ -224,7 +224,7 @@ while 1:
             elif temperature <= ALARM_LOW_TRIGGER_CRITICAL:
                 if ALARM_STATUS != ALARM_STATUS_LOW_CRITICAL:
                     ALARM_STATUS = ALARM_STATUS_LOW_CRITICAL;
-                    msg = '3:CRITICAL UNDERHEAT '
+                    msg = '3:CRITICAL OVERCOOL '
             elif temperature >= ALARM_HIGH_TRIGGER_WARNING:
                 if ALARM_STATUS != ALARM_STATUS_HIGH_WARNING:
                     ALARM_STATUS = ALARM_STATUS_HIGH_WARNING;
@@ -232,7 +232,7 @@ while 1:
             elif temperature <= ALARM_LOW_TRIGGER_WARNING:
                 if ALARM_STATUS != ALARM_STATUS_LOW_WARNING:
                     ALARM_STATUS = ALARM_STATUS_LOW_WARNING;
-                    msg = '2:WARNING UNDERHEAT '
+                    msg = '2:WARNING OVERCOOL '
             else:
                 ALARM_STATUS = ALARM_STATUS_NORMAL;
                 msg = '1:TEMPERATURE CANCEL '
