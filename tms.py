@@ -139,7 +139,7 @@ try:
         local_ipaddress = s.getsockname()[0]
         if DEBUG == 1: print 'IP address = ' + local_ipaddress
         logging.info('LOCAL_IP_ADDRESS: ' + local_ipaddress)
-        s.send("0:INFO " + SYSTEM_NAME + " STARTUP")
+        s.send("0:INFO STARTUP " + SYSTEM_NAME)
         s.close()
 
         octets = re.split('\.',local_ipaddress)
@@ -235,7 +235,7 @@ while 1:
                     msg = '2:WARNING OVERCOOL '
             else:
                 ALARM_STATUS = ALARM_STATUS_NORMAL;
-                msg = '1:TEMPERATURE CANCEL '
+                msg = '1:CANCEL TEMPERATURE '
 
             if msg:
                 msg = msg + SYSTEM_NAME + ' ' + display
